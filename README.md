@@ -261,7 +261,7 @@ print(numbers)  # [4.0, 8, 10.8, 3.3, 5.2], rounded!
 
 
 ## Nested Lists
-As noted at the start of the module, lists elements can be of **any** data type (and any _combination_ of data types)&mdash;including other lists! These "lists of lists" are known as **nested lists** or **2d-lists** (or _3d-list_ for a "list of lists of lists", etc). Nested lists are most commonly used to represent information such as _tables_ or _matrices_.
+As noted at the start of the module, lists elements can be of **any** data type (and any _combination_ of data types)&mdash;including other lists! These "lists of lists" are known as **nested lists** or **2-dimensional lists** (or _3d-list_ for a "list of lists of lists", etc). Nested lists are most commonly used to represent information such as _tables_ or _matrices_.
 
 Nested lists work exactly like normal lists; the elements just happen to themselves be indexable (like strings!):
 
@@ -302,6 +302,16 @@ row = 1  # cells starting with 'b'
 col = 3  # cells ending with 'd'
 table[row][col]  # "bd", the cell at row/col
 ```
+
+Note that we often use _nested for loops_ to iterate through a _nested list_:
+
+```python
+for i in range(len(table)):  # go through each row (with index)
+    for j in range(len(table[i]))  # go through each col of that row (with index)
+        print(table[i][j])  # access ith row, jth column
+```
+
+- We use a `j` for the index of the nested loop, because the `i` for "index" was already taken! `row` and `col` are also excellent local variable names.
 
 ## Tuples
 While lists are _mutable_ (changeable) sequences of data, **tuples** represent ___immutable___ sequences of data. These are useful if you want to enforce that a data value won't be changed, such as for a function argument (or a dictionary key; see [module 10](../../module10-dictionaries)). Indeed, many built-in Python functions utilize tuples.
