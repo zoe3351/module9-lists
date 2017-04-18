@@ -71,12 +71,12 @@ print(name_first)  # Sarah
 
 # access the element at index 2
 name_third = names[2]
-print(name_second)  # Zhang
+print(name_third)  # Zhang
 
 # accessing an index not in the list will give an error
 name_fourth = names[3]  # IndexError!
 
-# negative indicies count backwards from the end
+# negative indices count backwards from the end
 name_last = names[-1]  # Zhang
 name_second_to_last = names[-2]  #Amit
 ```
@@ -364,7 +364,7 @@ print(x)  # 1
 print(y)  # 2
 print(z)  # 3
 
-# the VALUE in this equation is evaluated as a tuple, and then is assigned to
+# the VALUE in this statement is evaluated as a tuple, and then is assigned to
 # multiple variables!
 a, b, c = x, y, z  # a=x; b=y; c=z
 
